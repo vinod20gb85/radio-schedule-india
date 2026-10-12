@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b46">
+  <meta name="description" content="A mobile-friendly guide to Akashvani Medium Wave stations and international Shortwave broadcast schedules in Indian Standard Time.">
+  <title>Radio Schedule India | Today's Broadcasts</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#" aria-label="Radio Schedule India home">
+        <span class="brand-icon" aria-hidden="true">◉</span>
+        <span><strong>Radio Schedule India</strong><small>Akashvani &amp; World Radio</small></span>
+      </a>
+      <span class="timezone"><span class="live-dot"></span> All times in IST</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR DAILY RADIO COMPANION</p>
+        <h1>Today's programme<br><span>schedules.</span></h1>
+        <p class="hero-description">Find station frequencies, check broadcast times, and open official Akashvani cue sheets from one simple page.</p>
+      </div>
+      <div class="date-card">
+        <span class="date-label">TODAY IN INDIA</span>
+        <strong id="today-date">Loading date…</strong>
+        <span id="india-clock" class="clock">--:--:-- IST</span>
+      </div>
+    </section>
+
+    <section class="quick-stats" aria-label="Schedule summary">
+      <div class="stat"><span class="stat-icon">📻</span><span><strong>5</strong><small>Akashvani stations</small></span></div>
+      <div class="stat"><span class="stat-icon">🌐</span><span><strong>5</strong><small>International services</small></span></div>
+      <div class="stat"><span class="stat-icon">🕒</span><span><strong>IST</strong><small>UTC +05:30</small></span></div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-heading">
+        <div><p class="eyebrow">INDIA · MEDIUM WAVE &amp; FM</p><h2>Akashvani stations</h2></div>
+        <span class="section-count">5 stations</span>
+      </div>
+      <p class="section-intro">Choose a station to open its Prasar Bharati programme cue sheet. The cue sheet is the source for the station's daily programme details.</p>
+      <div class="station-grid">
+        <article class="station-card">
+          <div class="station-top"><span class="station-symbol">📡</span><span class="band-tag">MW</span></div>
+          <h3>Dharwad</h3><p class="frequency">765 <span>kHz</span></p>
+          <p class="station-note">Medium Wave</p>
+          <a class="card-link" href="https://cuesheets.prasarbharati.org/viewsheet/472" target="_blank" rel="noopener noreferrer">Today's cue sheet <span>↗</span></a>
+        </article>
+        <article class="station-card">
+          <div class="station-top"><span class="station-symbol">📡</span><span class="band-tag">FM + MW</span></div>
+          <h3>Mangaluru</h3><p class="frequency">100.3 <span>MHz FM</span></p>
+          <p class="station-note">Also listed as MW 1089 kHz (275.5 m)</p>
+          <a class="card-link" href="https://cuesheets.prasarbharati.org/viewsheet/344" target="_blank" rel="noopener noreferrer">Today's cue sheet <span>↗</span></a>
+        </article>
+        <article class="station-card">
+          <div class="station-top"><span class="station-symbol">📡</span><span class="band-tag">MW</span></div>
+          <h3>Bengaluru</h3><p class="frequency">612 <span>kHz</span></p>
+          <p class="station-note">Medium Wave</p>
+          <a class="card-link" href="https://cuesheets.prasarbharati.org/viewsheet/349" target="_blank" rel="noopener noreferrer">Today's cue sheet <span>↗</span></a>
+        </article>
+        <article class="station-card">
+          <div class="station-top"><span class="station-symbol">📡</span><span class="band-tag">MW</span></div>
+          <h3>Tiruchirappalli</h3><p class="frequency">936 <span>kHz</span></p>
+          <p class="station-note">Medium Wave</p>
+          <a class="card-link" href="https://cuesheets.prasarbharati.org/viewsheet/199" target="_blank" rel="noopener noreferrer">Today's cue sheet <span>↗</span></a>
+        </article>
+        <article class="station-card">
+          <div class="station-top"><span class="station-symbol">📡</span><span class="band-tag">MW</span></div>
+          <h3>Chennai</h3><p class="frequency">720 <span>kHz</span></p>
+          <p class="station-note">Medium Wave</p>
+          <a class="card-link" href="https://cuesheets.prasarbharati.org/viewsheet/398" target="_blank" rel="noopener noreferrer">Today's cue sheet <span>↗</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-heading">
+        <div><p class="eyebrow">INTERNATIONAL BROADCASTS</p><h2>Shortwave schedules</h2></div>
+        <span class="section-count">Times in IST</span>
+      </div>
+      <p class="section-intro">These time and frequency details are based on the schedule supplied for this project. Shortwave frequencies and transmissions can change; verify with the broadcaster when possible.</p>
+      <div class="toolbar">
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="schedule-search" type="search" placeholder="Search broadcaster, time or frequency…" aria-label="Search shortwave schedule"></label>
+        <label class="filter-label" for="time-filter">Time of day</label>
+        <select id="time-filter">
+          <option value="all">All broadcasts</option>
+          <option value="morning">Morning (before 12:00)</option>
+          <option value="evening">Evening (12:00 onwards)</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Broadcaster</th><th>Time (IST)</th><th>Frequency</th><th>Notes</th></tr></thead>
+          <tbody id="schedule-body">
+            <tr data-period="morning"><td><strong>BBC World Service</strong><span class="service-type">International service</span></td><td>05:30–07:30</td><td><span class="freq-pill">9750 kHz</span><span class="freq-pill">12095 kHz</span></td><td>Morning broadcast</td></tr>
+            <tr data-period="morning"><td><strong>China Radio International</strong><span class="service-type">International service</span></td><td>05:30–06:30</td><td><span class="freq-pill">6075 kHz</span><span class="freq-pill">6180 kHz</span></td><td>First transmission</td></tr>
+            <tr data-period="morning"><td><strong>China Radio International</strong><span class="service-type">International service</span></td><td>06:30–07:30</td><td><span class="freq-pill">6180 kHz</span></td><td>Second transmission</td></tr>
+            <tr data-period="morning"><td><strong>CRI Tamil</strong><span class="service-type">Tamil-language service</span></td><td>07:30–09:30</td><td><span class="freq-pill">13600 kHz</span><span class="freq-pill">13730 kHz</span></td><td>Morning transmission</td></tr>
+            <tr data-period="evening"><td><strong>CRI Tamil</strong><span class="service-type">Tamil-language service</span></td><td>19:30–20:27</td><td><span class="freq-pill">13600 kHz</span></td><td>Additional time supplied</td></tr>
+            <tr data-period="evening"><td><strong>Radio Vaticana</strong><span class="service-type">Vatican Radio</span></td><td>20:20–20:40</td><td><span class="freq-pill">15490 kHz</span><span class="freq-pill">17790 kHz</span></td><td>Evening broadcast</td></tr>
+            <tr data-period="evening"><td><strong>CRI Tamil</strong><span class="service-type">Tamil-language service</span></td><td>20:30–21:30</td><td><span class="freq-pill">9690 kHz</span></td><td>Evening transmission</td></tr>
+            <tr data-period="evening"><td><strong>Adventist World Radio (AWR)</strong><span class="service-type">International service</span></td><td>20:30–21:00</td><td><span class="freq-pill">15530 kHz</span></td><td>Evening broadcast</td></tr>
+          </tbody>
+        </table>
+        <p id="no-results" class="no-results" hidden>No broadcasts match your search.</p>
+      </div>
+      <p class="schedule-note"><strong>Listening tip:</strong> Shortwave reception depends on location, time, propagation, antenna, and local interference. Frequencies listed here are not a guarantee of reception.</p>
+    </section>
+
+    <section class="help-banner">
+      <div><span class="help-icon">ℹ</span></div>
+      <div><h2>Keep the schedule accurate</h2><p>Akashvani cue sheets open on the official Prasar Bharati website. International shortwave listings are maintained in this page's HTML and should be reviewed when broadcasters update their schedules.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div><strong>Radio Schedule India</strong><p>A community-made radio reference page. Not an official broadcaster website.</p></div>
+      <span>Made for radio listeners · <span id="footer-year"></span></span>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
